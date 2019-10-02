@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int age=0;
+char friend_sex='0';
+cout<<"Enter the name of the person you want to write to!\n";
+string first_name;
+string friend_name;
+string name1;
+string name2;
+
+cin>>first_name;
+cout<<"Dear, "<<first_name<<"\nHow are you? It has been so long since we last met each other\n";
+cout<<"(Please enter a friend name!)\n";
+cin>>friend_name;
+cout<<"Have you seen "<<friend_name<< " lately?\n";
+cout<<"(Please enter the letter m if the friend is male or f if the friend is female)\n";
+cin>>friend_sex;
+
+if(friend_sex=='m')
+{
+cout<<"If you see "<<friend_name<< " please tell him to call me!\n";
+}
+if(friend_sex=='f')
+{
+cout<<"If you see "<<friend_name<< " please tell her to call me!\n";
+}
+while(age<=0 or age>=110)
+{
+cout<<"(Please enter an age!)\n";
+cin>>age;
+if(age<=0)
+{
+cout<<"You are kidding!It can't be serious!!\n";
+}
+if(age>=110)
+{
+cout<<"You are kidding!It can't be serious!!\n";
+}
+}
+cout<<"I hear you just had a birthday, and now you're "<<age<< " years old!\n";
+if(age<12)
+{
+cout<<"Next year you'll be "<<age+1<<'\n';
+}
+if(age==17)
+{
+cout<<"Next year you'll be able to vote\n";
+}
+if(age>70)
+{
+cout<<"I hope you are enjoying your retirement!\n";
+}
+cout<<"(Please enter your signature(Your full name))\n";
+cin>>name1>>name2;
+string signature=name1+" "+name2;
+cout<<"Yours Sincerely!\n\n"<<signature<<"\n";
+return 0;
+}
