@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    double value_1;
+    double value_2;
+
+    while(cin>>value_1>>value_2)
+    {
+    if(value_1<value_2)
+    {cout<<"the smaller value is: "<<value_1<<"\nthe larger value is: "<<value_2<<'\n';
+    if((value_2-value_1)<1.0/1000)
+     {cout<<"The two numbers are almost equal!\n";}
+    }
+    else if(value_1>value_2)
+    {cout<<"the smaller value is: "<<value_2<<"\nthe larger value is: "<<value_1<<'\n';
+    if((value_1-value_2)<1.0/1000)
+     {cout<<"The two numbers are almost equal!\n";}
+    }
+    else if(value_1==value_2)
+    {cout<<"The two nambers are equal!\n";}
+    }
+    return 0;
+}
