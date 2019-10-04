@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a;
+    int b;
+    cout << "Kerlek addj meg ket valtozot!\n";
+    cin>>a>>b;
+    b=a*b;
+    a=b/a;
+    b=b/a;
+    cout<<"uj a= "<<a<<"\nuj b= "<<b<<'\n';
+    return 0;
+}
