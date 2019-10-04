@@ -1,0 +1,54 @@
+//drill 4. 6-11
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    double sum,sm, larg, c;
+    int i =0;
+    sum = 0.0;
+    string unit;
+    bool h = true;
+    vector<double>szamok;
+    while(cin >> c)
+    {
+        ++i;
+        cin >> unit;
+        if (unit =="cm" or unit =="in" or unit =="ft" or unit=="m")
+        {
+            if (unit == "cm")
+            {c=c/100.0;};
+            if (unit == "in")
+            {c=c/39.3701;};
+            if (unit == "ft")
+            {c=(c*12)/39.3701;};
+            sum+=c;
+            szamok.push_back(c);
+            if (h)
+            {
+                sm = c;
+                larg = c;
+                h = false;
+            }
+            if (c<sm)
+            {sm = c; cout << sm << " m smallest so far.\n";}
+                else {if(c>larg)
+                {larg = c; cout <<larg << " m largest so far.\n";}
+                    else
+                    {cout<<c <<"m\n";}
+                    }
+        }
+        else {cout<<"Unknown unit.";}
+    }
+    cout << "number of numbers: " << i <<"\nsum of numbers:" << sum;
+    cout << "\nall the numbers: \n";
+    sort(szamok.begin(), szamok.end());
+    for (int a=0; a<szamok.size();++a)
+    {
+        cout << szamok[a] <<"\n";
+    }
+    return (0);
+}
